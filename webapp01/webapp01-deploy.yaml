@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: webapp01
+  name: webapp01
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp01
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webapp01
+    spec:
+      containers:
+      - image: mottythomas/ledger
+        name: ledger
+        resources: {}
+status: {}
